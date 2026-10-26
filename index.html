@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DD Academy offers concept clarity sessions for engineering students: programming, computer science, electronics, online learning and supplementary exam preparation.">
+  <meta name="theme-color" content="#08366b">
+  <title>DD Academy | Concept Clarity for a Brighter Tomorrow</title>
+  <style>
+    :root{--navy:#08366b;--blue:#0755a0;--yellow:#ffe45c;--pink:#ed287c;--mint:#dff7ef;--ink:#14233c;--muted:#59677c;--paper:#fffdf8}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+    a{color:inherit} .wrap{width:min(1120px,92%);margin:auto}
+    header{background:rgba(255,253,248,.96);position:sticky;top:0;z-index:10;border-bottom:1px solid #e8edf3;backdrop-filter:blur(12px)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px 0}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font-weight:900;font-size:1.45rem;letter-spacing:-.04em}.cap{display:grid;place-items:center;background:var(--yellow);border-radius:13px;width:42px;height:42px;font-size:1.35rem}
+    nav{display:flex;gap:23px;align-items:center}nav a{text-decoration:none;font-size:.93rem;font-weight:700;color:#34445c}nav a:hover{color:var(--pink)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:800;border-radius:999px;padding:13px 20px;border:2px solid transparent;transition:.2s;cursor:pointer}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--yellow);color:var(--navy);box-shadow:0 7px 0 #e8c93b}.btn-outline{border-color:#c9d5e4;color:var(--navy);background:white}.btn-whatsapp{background:#128c59;color:white}
+    .hero{background:radial-gradient(circle at 90% 10%,#fff1a4 0,transparent 27%),linear-gradient(135deg,#eaf5ff 0%,#fffdf8 58%,#fff1f7 100%);padding:66px 0 55px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}.eyebrow{display:inline-block;background:#d8f5ea;color:#087252;font-weight:850;border-radius:999px;padding:7px 13px;font-size:.85rem;letter-spacing:.02em}.hero h1{font-size:clamp(2.5rem,5.6vw,4.7rem);line-height:1.03;letter-spacing:-.055em;color:var(--navy);margin:18px 0}.hero h1 span{color:var(--pink)}.hero p{font-size:1.13rem;color:#43536b;max-width:620px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin:25px 0 20px}.micro{font-size:.9rem!important;color:#64738a!important}.hero-art{position:relative}.hero-art:before{content:"";position:absolute;inset:8% -3% -4% 8%;background:var(--yellow);border-radius:38% 62% 48% 52%;transform:rotate(-5deg);opacity:.65}.hero-art img{position:relative;width:100%;display:block;border-radius:24px;box-shadow:0 20px 55px #08366b24;border:7px solid white}
+    .trust{padding:24px 0;background:white;border-bottom:1px solid #edf0f4}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.trust-item{display:flex;gap:12px;align-items:center;font-weight:800;color:var(--navy)}.trust-icon{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:#e8f4ff;font-size:1.3rem;flex-shrink:0}
+    section{padding:70px 0}.section-head{text-align:center;max-width:760px;margin:0 auto 34px}.kicker{color:var(--pink);font-weight:900;text-transform:uppercase;letter-spacing:.13em;font-size:.8rem}.section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.12;letter-spacing:-.04em;color:var(--navy);margin:9px 0 12px}.section-head p{color:var(--muted);margin:0}
+    .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.course{background:white;border:1px solid #e4eaf2;border-radius:20px;padding:25px;box-shadow:0 9px 25px #0b37690b}.course .emoji{font-size:1.8rem;width:54px;height:54px;border-radius:17px;background:#eaf4ff;display:grid;place-items:center}.course h3{color:var(--navy);font-size:1.22rem;margin:15px 0 7px}.course p{color:var(--muted);font-size:.96rem;margin:0 0 12px}.course ul{padding-left:19px;margin:0;color:#33435a;font-size:.94rem}.course li{margin:4px 0}
+    .exam{background:linear-gradient(120deg,#fff0f6,#fff9fc);border:1px solid #ffd5e7;border-radius:25px;padding:30px;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.exam h3{font-size:1.8rem;line-height:1.15;color:#bd155b;margin:8px 0}.exam ul{padding-left:20px;color:#4d3850}.exam-bubble{background:white;border-radius:24px;padding:22px;font-size:3.4rem;box-shadow:0 10px 28px #d81b6014}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.about-panel{background:var(--navy);color:white;border-radius:24px;padding:32px}.about-panel h3{font-size:1.8rem;margin:0 0 12px}.about-panel p{color:#e1ecfa}.checklist{display:grid;gap:14px}.check{display:flex;gap:12px;align-items:flex-start}.check b{color:var(--navy);display:block}.check span{color:var(--muted);font-size:.95rem}.checkmark{background:#dff7ef;color:#087252;border-radius:50%;width:29px;height:29px;display:grid;place-items:center;font-weight:900;flex-shrink:0}
+    .online{background:#eaf5ff}.online-inner{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.online h2{color:var(--navy);font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:8px 0}.online p{color:#43536b;max-width:650px}.online-badge{background:white;border:1px solid #d5e7fa;border-radius:24px;padding:24px;text-align:center;min-width:180px}.online-badge strong{display:block;font-size:2.4rem;color:var(--blue)}
+    .contact{background:var(--navy);color:white}.contact .section-head h2{color:white}.contact .section-head p{color:#d5e4f7}.contact-card{max-width:760px;margin:auto;background:white;color:var(--ink);border-radius:24px;padding:30px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.contact-card h3{margin:0 0 8px;color:var(--navy);font-size:1.5rem}.contact-card p{color:var(--muted)}.phone{font-size:1.7rem;font-weight:950;color:var(--navy);text-decoration:none;letter-spacing:.01em}.contact-actions{display:grid;gap:12px}
+    footer{background:#062951;color:#d7e5f6;padding:22px 0;font-size:.9rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.footer-inner a{color:#ffe45c}
+    @media(max-width:850px){nav{gap:12px}nav a:not(.nav-cta){display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-art{max-width:600px;margin:5px auto 0}.course-grid{grid-template-columns:repeat(2,1fr)}.trust-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.nav{padding:10px 0}.brand{font-size:1.2rem}.nav-cta{padding:10px 13px;font-size:.85rem}.hero{padding:43px 0}.hero h1{font-size:2.75rem}.course-grid{grid-template-columns:1fr}.trust-grid{grid-template-columns:1fr 1fr;gap:14px}.trust-item{font-size:.85rem}.trust-icon{width:37px;height:37px}.exam,.online-inner,.contact-card{grid-template-columns:1fr}.exam-bubble{display:none}.online-badge{min-width:0}.contact-card{padding:23px}section{padding:52px 0}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="cap">🎓</span><span>DD Academy</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#courses">Courses</a><a href="#about">Why DD Academy</a><a href="#online">Online Sessions</a>
+      <a class="btn btn-primary nav-cta" href="#contact">Enquire Now ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">🎯 Concept clarity for a brighter tomorrow</span>
+        <h1>Learn concepts.<br><span>Build confidence.</span><br>Achieve success.</h1>
+        <p>Concept Clarity Sessions for Engineering Students. Strengthen your fundamentals, practise problem-solving, and prepare with confidence—with online sessions available.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#courses">Explore Courses ↓</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/919550797705?text=Hello%20DD%20Academy%2C%20I%20would%20like%20to%20know%20about%20your%20courses." target="_blank" rel="noopener">☏ WhatsApp Us</a>
+        </div>
+        <p class="micro">For regular and supplementary students · Individual attention · Small-group learning</p>
+      </div>
+      <div class="hero-art">
+        <img src="assets/dd-academy-poster.png" alt="DD Academy Concept Clarity Sessions poster showing courses, electronics learning and contact number">
+      </div>
+    </div>
+  </section>
+  <div class="trust"><div class="wrap trust-grid">
+    <div class="trust-item"><span class="trust-icon">💡</span><span>Clear Concepts</span></div>
+    <div class="trust-item"><span class="trust-icon">🧩</span><span>Problem Solving</span></div>
+    <div class="trust-item"><span class="trust-icon">📈</span><span>Exam Readiness</span></div>
+    <div class="trust-item"><span class="trust-icon">👥</span><span>Personalised Support</span></div>
+  </div></div>
+  <section id="courses">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">Learn with clarity</span><h2>Courses designed around your learning goals</h2><p>Build your foundation, understand the “why” behind concepts, and practise what you learn.</p></div>
+      <div class="course-grid">
+        <article class="course"><div class="emoji">🐍</div><h3>Programming Languages</h3><p>Learn programming step by step, from fundamentals to practical coding.</p><ul><li>Python Programming</li><li>C Programming</li><li>C++ Programming</li><li>Java Programming</li></ul></article>
+        <article class="course"><div class="emoji">🧠</div><h3>Data Structures & Algorithms</h3><p>Understand core data structures and develop logical problem-solving skills.</p><ul><li>Data structures fundamentals</li><li>Algorithmic thinking</li><li>Practice problems</li></ul></article>
+        <article class="course"><div class="emoji">🗄️</div><h3>Core Computer Science</h3><p>Build confidence in essential undergraduate engineering subjects.</p><ul><li>Database Management Systems</li><li>Operating Systems</li><li>Computer Networks</li></ul></article>
+        <article class="course"><div class="emoji">☁️</div><h3>Cloud & Big Data</h3><p>Explore modern computing concepts through clear explanations and examples.</p><ul><li>Cloud Computing</li><li>Big Data concepts</li><li>Foundational technologies</li></ul></article>
+        <article class="course"><div class="emoji">🔌</div><h3>Electronics & Hands-on Learning</h3><p>Explore electronics through introductory practical learning.</p><ul><li>Arduino: basics to applications</li><li>Raspberry Pi: basics to applications</li><li>Practical project guidance</li></ul></article>
+        <article class="course"><div class="emoji">📝</div><h3>Supplementary Exam Support</h3><p>Focused academic support to help you prepare systematically.</p><ul><li>Focused revision</li><li>Important concepts and questions</li><li>Previous-year question discussion</li><li>Practice problems and guidance</li></ul></article>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap exam">
+      <div><span class="kicker">Special support</span><h3>Preparing for a supplementary exam?</h3><p>Make your preparation more focused with concept revision and guided practice.</p><ul><li>Identify topics that need more attention</li><li>Revise important concepts</li><li>Discuss previous-year questions</li><li>Practise problems and clarify doubts</li></ul><a class="btn btn-whatsapp" href="https://wa.me/919550797705?text=Hello%20DD%20Academy%2C%20I%20am%20interested%20in%20supplementary%20exam%20sessions." target="_blank" rel="noopener">Ask about exam sessions ↗</a></div>
+      <div class="exam-bubble" aria-hidden="true">📚</div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-panel"><span class="kicker" style="color:#ffe45c">Our approach</span><h3>Understand first. Practise next. Succeed with confidence.</h3><p>DD Academy is focused on concept-based learning for engineering students, with support for regular coursework and supplementary exam preparation.</p><a class="btn btn-primary" href="#contact">Talk to DD Academy ↗</a></div>
+      <div class="checklist">
+        <div class="check"><span class="checkmark">✓</span><div><b>Concept-based learning</b><span>Understand the fundamentals instead of memorising without clarity.</span></div></div>
+        <div class="check"><span class="checkmark">✓</span><div><b>Individual attention and small groups</b><span>Learning support that gives students space to ask questions.</span></div></div>
+        <div class="check"><span class="checkmark">✓</span><div><b>Practice and problem solving</b><span>Reinforce concepts through examples and guided exercises.</span></div></div>
+        <div class="check"><span class="checkmark">✓</span><div><b>Support for regular and supplementary students</b><span>Sessions can be aligned with course learning needs and exam preparation.</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="online" id="online">
+    <div class="wrap online-inner">
+      <div><span class="kicker">Learn from anywhere</span><h2>Online sessions available</h2><p>Join from home and ask about available subjects, session formats, schedules, and batches. Contact DD Academy to discuss the best fit for your learning needs.</p><a class="btn btn-primary" href="https://wa.me/919550797705?text=Hello%20DD%20Academy%2C%20please%20share%20details%20about%20online%20sessions." target="_blank" rel="noopener">Get Online Session Details ↗</a></div>
+      <div class="online-badge"><span style="font-size:2.6rem">💻</span><strong>Online</strong><span>Flexible learning options</span></div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker" style="color:#ffe45c">Let's get started</span><h2>Enquiries & Registration</h2><p>Message DD Academy to ask about subjects, availability, schedules, and registration.</p></div>
+      <div class="contact-card">
+        <div><h3>Contact DD Academy</h3><p>Concept Clarity Sessions for Engineering Students</p><a class="phone" href="tel:+919550797705">95507 97705</a><p style="font-size:.9rem">Online sessions available</p></div>
+        <div class="contact-actions"><a class="btn btn-whatsapp" href="https://wa.me/919550797705?text=Hello%20DD%20Academy%2C%20I%20would%20like%20to%20enquire%20about%20classes." target="_blank" rel="noopener">☏ Enquire on WhatsApp</a><a class="btn btn-outline" href="tel:+919550797705">☎ Call DD Academy</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> DD Academy. All rights reserved.</span><span>Learn Concepts · Build Confidence · Achieve Success</span><a href="#home">Back to top ↑</a></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
